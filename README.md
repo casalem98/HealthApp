@@ -1,6 +1,6 @@
 # HealthApp
 An app that helps users count their daily calories.
-User android studio to run and test. 
+Use android studio to run and test. 
 
 TO DO:
   1. Create unit testing 
