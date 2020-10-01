@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeAbout">
+
+    <TextView
+        android:id="@id/welcomeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to HealthyEats! Tell us about yourself!"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_toLeftOf="@id/welcome_picture"/>
+
+    <ImageView
+        android:id="@+id/welcome_picture"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:adjustViewBounds="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/unicorn_welcome"
+        android:scaleType="fitXY"
+        android:padding="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="25dp"/>
+
+    <TextView
+        android:id="@+id/ageTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age : "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/welcome_picture"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"/>
+
+    <EditText
+        android:id="@+id/inAge"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="          years"
+        android:layout_toRightOf="@+id/ageTxt"
+        android:layout_below="@+id/welcome_picture"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/genderTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender : "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/ageTxt"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"/>
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_toRightOf="@+id/ageTxt"
+        android:layout_below="@+id/inAge"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/weightTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight : "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/genderTxt"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp" />
+
+    <EditText
+        android:id="@+id/inWeight"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="             lb "
+        android:layout_toRightOf="@+id/ageTxt"
+        android:layout_below="@+id/spinner3"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="11dp"/>
+
+    <TextView
+        android:id="@+id/heightTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height : "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/weightTxt"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp" />
+
+    <EditText
+        android:id="@+id/inFeet"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:hint="    ft."
+        android:layout_toRightOf="@+id/ageTxt"
+        android:layout_below="@+id/inWeight"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="2dp"/>
+
+    <EditText
+        android:id="@+id/inInches"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:hint="    in."
+        android:layout_toRightOf="@+id/inFeet"
+        android:layout_below="@+id/inWeight"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/activityTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity : "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/heightTxt"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"/>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hello"
+        android:layout_toRightOf="@id/activityTxt"
+        android:layout_marginTop="17dp"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/inFeet"/>
+
+    <TextView
+        android:id="@+id/goalTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goal : "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/activityTxt"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="25dp"/>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/goalTxt"
+        android:autofillHints="hello"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goalTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Save"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFoodItems">
+
+    <TextView
+        android:id="@+id/foodNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Food Name "
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/foodNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/foodNameText"
+        android:hint="Input Food Name"/>
+
+    <TextView
+        android:id="@+id/orText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foodNameInput"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="OR "
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/UPCtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/orText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="UPC "
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/inputUPC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/UPCtext"
+        android:layout_toRightOf="@id/UPCtext"
+        android:hint="Input UPC"/>
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputUPC"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="Search"/>
+
+    <Button
+        android:id="@+id/manualBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchBtn"
+        android:layout_centerInParent="true"
+        android:text="Manually Input Food"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/searchedTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:layout_below="@id/searchBtn"/>
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/unicorn_question"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/manualBtn"
+        android:layout_marginTop="140dp"/>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/colorPrimary"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

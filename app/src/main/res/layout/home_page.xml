@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation">
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            >
+
+            <TextView
+                android:id="@+id/welcomeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:text="Welcome back!"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/calStarter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Calorie intake today, "
+                android:textSize="25sp"
+                android:layout_below="@+id/welcomeTxt"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/calInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/welcomeTxt"
+                android:textSize="25sp"
+                android:layout_toRightOf="@+id/calStarter"/>
+
+            <TextView
+                android:id="@+id/calLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calories left "
+                android:textSize="23sp"
+                android:layout_below="@+id/calStarter"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/calLeftNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/calStarter"
+                android:layout_toRightOf="@+id/calLeft"
+                />
+
+            <TextView
+                android:id="@+id/breakfastTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breakfast"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_below="@+id/calLeft"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:id="@+id/breakfastBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/breakfastTxt"
+                android:layout_alignBaseline="@id/breakfastTxt"
+                android:layout_marginLeft="60dp"
+                android:text="Add"/>
+
+            <Button
+                android:id="@+id/breakfastEditBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/breakfastBtn"
+                android:layout_alignBaseline="@+id/breakfastBtn"
+                android:layout_marginLeft="15dp"
+                android:text="Edit"/>
+
+            <TextView
+                android:id="@+id/breakfastOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/breakfastTxt"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:hint="Nothing here yet"/>
+
+            <TextView
+                android:id="@+id/lunchTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lunch"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/breakfastOut"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:id="@+id/lunchAddBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lunchTxt"
+                android:layout_alignBaseline="@id/lunchTxt"
+                android:layout_marginLeft="100dp"
+                android:text="Add"/>
+
+            <Button
+                android:id="@+id/lunchEditBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lunchAddBtn"
+                android:layout_alignBaseline="@+id/lunchAddBtn"
+                android:layout_marginLeft="15dp"
+                android:text="Edit"/>
+
+            <TextView
+                android:id="@+id/lunchOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lunchTxt"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:hint="Nothing here yet"/>
+
+            <TextView
+                android:id="@+id/dinnerTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dinner"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/lunchOut"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:id="@+id/dinnerAddBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dinnerTxt"
+                android:layout_alignBaseline="@id/dinnerTxt"
+                android:layout_marginLeft="100dp"
+                android:text="Add"/>
+
+            <Button
+                android:id="@+id/dinnerEditBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dinnerAddBtn"
+                android:layout_alignBaseline="@+id/dinnerAddBtn"
+                android:layout_marginLeft="15dp"
+                android:text="Edit"/>
+
+            <TextView
+                android:id="@+id/dinnerOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dinnerTxt"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="20sp"
+                android:hint="Nothing here yet"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/colorPrimary"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
